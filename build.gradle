@@ -22,8 +22,12 @@ repositories {
 
 dependencies {
 	compile("org.springframework.boot:spring-boot-starter")
-	compile("com.h2database:h2")
-	compile("org.apache.wicket:wicket-core:7.0.0-M4")
+	compile("org.springframework.boot:spring-boot-starter-logging")
+	compile("org.springframework.boot:spring-boot-starter-tomcat")
+	compile("org.springframework:spring-web")
+	//compile("com.h2database:h2")
+	compile("org.apache.wicket:wicket-spring:7.0.0-M4")
+	
 	testCompile("junit:junit")
 }
 
