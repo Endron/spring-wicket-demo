@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.embedded.ServletContextInitializer;
 import org.springframework.context.annotation.Configuration;
 
-import com.comsysto.wicketBoot.wicket.MyWebApplication;
+import com.comsysto.wicketBoot.webapp.MyWebApplication;
 
 /**
  * Configure the Servlet Context to include the Wicket Web Application.

@@ -1,4 +1,4 @@
-package com.comsysto.wicketBoot.wicket.bookTablePanel;
+package com.comsysto.wicketBoot.webapp.bookTablePanel;
 
 import java.util.Iterator;
 
@@ -13,7 +13,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 import com.comsysto.wicketBoot.data.entities.Book;
-import com.comsysto.wicketBoot.wicket.BookModel;
+import com.comsysto.wicketBoot.webapp.BookModel;
 
 /**
  * {@link IDataProvider} to read all the {@link Book}s from the database. By

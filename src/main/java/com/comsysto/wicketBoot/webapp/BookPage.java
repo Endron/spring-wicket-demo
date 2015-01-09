@@ -1,10 +1,10 @@
-package com.comsysto.wicketBoot.wicket;
+package com.comsysto.wicketBoot.webapp;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.springframework.data.domain.Sort;
 
-import com.comsysto.wicketBoot.wicket.bookTablePanel.BookProvider;
-import com.comsysto.wicketBoot.wicket.bookTablePanel.BookTablePanel;
+import com.comsysto.wicketBoot.webapp.bookTablePanel.BookProvider;
+import com.comsysto.wicketBoot.webapp.bookTablePanel.BookTablePanel;
 
 /**
  * Implements a page, that lists all books in the database.

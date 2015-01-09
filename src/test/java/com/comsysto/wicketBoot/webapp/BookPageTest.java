@@ -1,8 +1,10 @@
-package com.comsysto.wicketBoot.wicket;
+package com.comsysto.wicketBoot.webapp;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.comsysto.wicketBoot.webapp.BookPage;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 public class BookPageTest extends WicketTestBase {

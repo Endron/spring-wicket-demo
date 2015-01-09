@@ -1,4 +1,4 @@
-package com.comsysto.wicketBoot.wicket;
+package com.comsysto.wicketBoot.webapp;
 
 import javax.inject.Inject;
 

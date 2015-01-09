@@ -1,4 +1,4 @@
-package com.comsysto.wicketBoot.wicket;
+package com.comsysto.wicketBoot.webapp;
 
 import org.apache.wicket.Page;
 import org.apache.wicket.protocol.http.WebApplication;

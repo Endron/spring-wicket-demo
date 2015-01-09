@@ -1,4 +1,4 @@
-package com.comsysto.wicketBoot.wicket.bookTablePanel;
+package com.comsysto.wicketBoot.webapp.bookTablePanel;
 
 import static java.util.Arrays.asList;
 import static org.junit.Assert.assertEquals;
@@ -10,7 +10,8 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.comsysto.wicketBoot.data.entities.Book;
-import com.comsysto.wicketBoot.wicket.WicketTestBase;
+import com.comsysto.wicketBoot.webapp.WicketTestBase;
+import com.comsysto.wicketBoot.webapp.bookTablePanel.BookTablePanel;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 public class BookTablePanelTest extends WicketTestBase {

@@ -1,4 +1,4 @@
-package com.comsysto.wicketBoot.wicket;
+package com.comsysto.wicketBoot.webapp;
 
 import javax.inject.Inject;
 
@@ -10,6 +10,7 @@ import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.comsysto.wicketBoot.ApplicationStarter;
+import com.comsysto.wicketBoot.webapp.MyWebApplication;
 
 /**
  * Base class for Tests of Wicket components. Creates the {@link WicketTester}.

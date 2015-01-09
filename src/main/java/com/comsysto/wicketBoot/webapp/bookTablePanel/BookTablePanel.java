@@ -1,4 +1,4 @@
-package com.comsysto.wicketBoot.wicket.bookTablePanel;
+package com.comsysto.wicketBoot.webapp.bookTablePanel;
 
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.navigation.paging.IPageable;
