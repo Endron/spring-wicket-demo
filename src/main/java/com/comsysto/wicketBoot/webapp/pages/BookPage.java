@@ -1,4 +1,4 @@
-package com.comsysto.wicketBoot.webapp;
+package com.comsysto.wicketBoot.webapp.pages;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.springframework.data.domain.Sort;

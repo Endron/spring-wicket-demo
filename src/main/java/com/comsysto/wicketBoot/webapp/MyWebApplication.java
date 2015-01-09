@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
+import com.comsysto.wicketBoot.webapp.pages.BookPage;
+import com.comsysto.wicketBoot.webapp.pages.HomePage;
+
 @Component(value = MyWebApplication.BEAN_NAME)
 public class MyWebApplication extends WebApplication {
 
