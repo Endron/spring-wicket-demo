@@ -39,6 +39,6 @@ public class MyWebApplication extends WebApplication {
 				new SpringComponentInjector(this, ctx));
 
 		mountPage("/home", HomePage.class);
-		mountPage("/books", BookListPage.class);
+		mountPage("/books", BookPage.class);
 	}
 }

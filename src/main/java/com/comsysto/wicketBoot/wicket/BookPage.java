@@ -17,12 +17,12 @@ import com.comsysto.wicketBoot.data.repository.BookRepository;
 /**
  * Implements a page, that lists all books in the database.
  */
-public class BookListPage extends WebPage {
+public class BookPage extends WebPage {
 
 	@Inject
 	BookRepository repository;
 
-	public BookListPage() {
+	public BookPage() {
 		final List<BookModel> books = new LinkedList<>();
 		repository.findAll().forEach(it -> books.add(new BookModel(it)));
 
