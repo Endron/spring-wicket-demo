@@ -9,7 +9,7 @@ buildscript {
 	}
 }
 
-apply plugin: "java"
+apply plugin: "war"
 apply plugin: "eclipse"
 apply plugin: "spring-boot"
 
@@ -27,6 +27,8 @@ dependencies {
 	compile("org.springframework.boot:spring-boot-starter-data-jpa")
 	compile("com.h2database:h2")
 	compile("org.apache.wicket:wicket-spring:7.0.0-M4")
+	
+	providedCompile("org.springframework.boot:spring-boot-starter-tomcat")
 	
 	testCompile("junit:junit")
 	testCompile("org.springframework.boot:spring-boot-starter-test")
