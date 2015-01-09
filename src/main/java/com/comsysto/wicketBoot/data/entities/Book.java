@@ -1,5 +1,7 @@
 package com.comsysto.wicketBoot.data.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -8,7 +10,7 @@ import javax.persistence.Id;
  * Represents an Book.
  */
 @Entity
-public class Book {
+public class Book implements Serializable {
 
 	@Id
 	@GeneratedValue
@@ -19,6 +21,16 @@ public class Book {
 	private String title;
 
 	private String author;
+
+	public Book() {
+		super();
+	}
+
+	public Book(final String title, final String author, final String isbn) {
+		this.title = title;
+		this.author = author;
+		this.isbn = isbn;
+	}
 
 	public Long getId() {
 		return id;

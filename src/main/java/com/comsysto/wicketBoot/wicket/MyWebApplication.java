@@ -38,6 +38,7 @@ public class MyWebApplication extends WebApplication {
 		getComponentInstantiationListeners().add(
 				new SpringComponentInjector(this, ctx));
 
-		// mountPage("/home", HomePage.class);
+		mountPage("/home", HomePage.class);
+		mountPage("/books", BookListPage.class);
 	}
 }
