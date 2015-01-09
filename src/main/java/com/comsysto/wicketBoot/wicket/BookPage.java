@@ -1,17 +1,16 @@
 package com.comsysto.wicketBoot.wicket;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import javax.inject.Inject;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
 import org.apache.wicket.markup.repeater.Item;
 import org.apache.wicket.markup.repeater.RepeatingView;
 import org.apache.wicket.markup.repeater.data.DataView;
-import org.apache.wicket.markup.repeater.data.ListDataProvider;
+import org.apache.wicket.markup.repeater.data.IDataProvider;
 
+import com.comsysto.wicketBoot.data.entities.Book;
 import com.comsysto.wicketBoot.data.repository.BookRepository;
 
 /**
@@ -23,21 +22,21 @@ public class BookPage extends WebPage {
 	BookRepository repository;
 
 	public BookPage() {
-		final List<BookModel> books = new LinkedList<>();
-		repository.findAll().forEach(it -> books.add(new BookModel(it)));
+		final IDataProvider<Book> dataProvider = new BookProvider();
 
-		final ListDataProvider<BookModel> dataProvider = new ListDataProvider<>(books);
-
-		final DataView<BookModel> dataView = new DataView<BookModel>("dataView", dataProvider) {
+		final DataView<Book> dataView = new DataView<Book>("dataView", dataProvider) {
 			@Override
-			protected void populateItem(final Item<BookModel> item) {
+			protected void populateItem(final Item<Book> item) {
 				final RepeatingView redirectView = new RepeatingView("bookRows");
-				redirectView.add(new Label(redirectView.newChildId(), item.getModelObject().getObject().getTitle()));
-				redirectView.add(new Label(redirectView.newChildId(), item.getModelObject().getObject().getAuthor()));
-				redirectView.add(new Label(redirectView.newChildId(), item.getModelObject().getObject().getIsbn()));
+				redirectView.add(new Label(redirectView.newChildId(), item.getModelObject().getTitle()));
+				redirectView.add(new Label(redirectView.newChildId(), item.getModelObject().getAuthor()));
+				redirectView.add(new Label(redirectView.newChildId(), item.getModelObject().getIsbn()));
 				item.add(redirectView);
 			}
 		};
+		dataView.setItemsPerPage(3);
+		
 		add(dataView);
+		add(new PagingNavigator("pagingNavigator", dataView));
 	}
 }

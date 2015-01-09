@@ -2,7 +2,7 @@ package com.comsysto.wicketBoot.data.repository;
 
 import java.util.List;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.comsysto.wicketBoot.data.entities.Book;
@@ -11,7 +11,7 @@ import com.comsysto.wicketBoot.data.entities.Book;
  * Repository to access {@link Book} entities.
  */
 @Transactional(readOnly = true)
-public interface BookRepository extends CrudRepository<Book, Long> {
+public interface BookRepository extends PagingAndSortingRepository<Book, Long> {
 
 	/**
 	 * Get all {@link Book}s with the given {@code title}.
