@@ -35,5 +35,6 @@ public class PopulateBookTableRunner implements CommandLineRunner {
 		repository.save(new Book("The Lord of the Rings", "J. R. R. Tolkien", "978-0007525546"));
 		repository.save(new Book("Effective Java; A Proramming Language Guide", "Joshua Bloch", "978-0321356680"));
 		repository.save(new Book("The Hitchhiker's Guide to the Galaxy", "Douglas Adams", "978-0345391803"));
+		repository.save(new Book("xUnit Test Patterns: Refactoring Test Code", "Gerard Meszaros", "978-0131495050"));
 	}
 }

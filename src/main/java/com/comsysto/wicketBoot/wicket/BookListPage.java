@@ -11,9 +11,7 @@ import org.apache.wicket.markup.repeater.Item;
 import org.apache.wicket.markup.repeater.RepeatingView;
 import org.apache.wicket.markup.repeater.data.DataView;
 import org.apache.wicket.markup.repeater.data.ListDataProvider;
-import org.apache.wicket.model.Model;
 
-import com.comsysto.wicketBoot.data.entities.Book;
 import com.comsysto.wicketBoot.data.repository.BookRepository;
 
 /**
@@ -41,37 +39,5 @@ public class BookListPage extends WebPage {
 			}
 		};
 		add(dataView);
-	}
-
-	private class BookModel extends Model<Book> {
-
-		private final long bookId;
-		private Book book;
-
-		public BookModel(final Book book) {
-			this.bookId = book.getId();
-			this.book = book;
-		}
-
-		@Override
-		public void detach() {
-			book = null;
-
-			super.detach();
-		}
-
-		@Override
-		public Book getObject() {
-			if (book == null) {
-				book = repository.findOne(bookId);
-			}
-
-			return book;
-		}
-
-		@Override
-		public void setObject(final Book object) {
-			throw new RuntimeException("This model is read only.");
-		}
 	}
 }
